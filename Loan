@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Loan Chat Interface</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen max-h-screen w-full flex-col overflow-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-white/10 shrink-0">
+<a href="AI.html" class="text-white flex size-10 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</a>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Loan Application</h2>
+<div class="size-10 shrink-0"></div> <!-- Spacer to balance the back button -->
+</div>
+<!-- Chat Area -->
+<div class="flex-1 overflow-y-auto p-4 space-y-6">
+<!-- AI Message -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0 border-2 border-primary" data-alt="AI assistant circular avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCidZYk1MfV6uLCI3exKUiFsu4wJcZLhsaqjlNss2VtLiRcq5KO8Tq5EBCiOe7p4VHQN5AgY80ylO2akZZg-ITxyr2hYTXGWAH57-dxDuExW7H-iePfaxHBsJJfor2jiPdALS2BPtXKVrwiXMo5dg-XynmajbPuXvfH7XCt83RGaDBFtgdOh933mBbBtp9wSAj4u9N_cXLF5tj82qVciaOBfRmYsWhhoEy3ZDAUA20WkjtsvSP-DqWQVEtHFU_JRGIIisMsu2Y7K2EZ");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-white/60 text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-[#28392e] text-white">
+                        Hello! I'm here to help you with your loan application. To start, what type of loan are you looking for?
+                    </p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-white/60 text-[13px] font-normal leading-normal max-w-[360px] text-right">You</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-primary text-background-dark">I'm looking for a personal loan.</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0" data-alt="User circular avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1QQlMQ-jQuRmAev3U3cbJ9E9mJmx3pFz_wc4hRpayPm5MfyGwOBaUbPdjaG4FyvMpm0S9wJPtmQnh7Byz2xRj14bm-j5zUSpmE4zd3U9WiDrW1gtMx0lY6y_rmbju1Vuwya8QhKkp9P6YzXzyIh2oEeQcELXy3ByJM64nytplEL4XmW7Lb1EdPXXJ3eawEP28LWNl-bn1au-oDZrdS1Fr6vzp1IJomOo_uQYbMFKui_fsbbxT8JbBT0Wm3XxNZbarNfg3Iq41JO66");'></div>
+</div>
+<!-- AI Message with Quick Replies -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0 border-2 border-primary" data-alt="AI assistant circular avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDt3WBM8tu9B74aGYgutSnS1P5JIlecrXdh0tKfDqjulMjXHLlmxkl9FV4p5fsTTgvEJTMy6uPBcRSVYgCyskEf7gIc1rO6rdb3xhdA-BSD_JbYLVJQPcU9pU9AbzkLmAPaylJrxuTv4N1J_NMEWSZ2aqJZqC_mjMjmVCWeWhCbqTeS6ojeHa-1djsCWqqQ96xrR63-SkRWtrKqt97fnee1eKP8U2gZ4ZUZ9jqfhajjLzmmRup2BGlzwXsRyy8k5bGz29yWiStXQArs");'></div>
+<div class="flex flex-1 flex-col gap-2 items-start">
+<p class="text-white/60 text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-[#28392e] text-white">
+                        Great! Please upload a copy of your government-issued ID.
+                    </p>
+</div>
+</div>
+<!-- User Uploaded File Message -->
+<div class="flex items-end gap-3 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-white/60 text-[13px] font-normal leading-normal max-w-[360px] text-right">You</p>
+<div class="flex items-center gap-3 rounded-lg px-4 py-3 bg-primary text-background-dark">
+<span class="material-symbols-outlined">description</span>
+<p class="text-base font-medium">drivers_license.pdf</p>
+</div>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0" data-alt="User circular avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-QP9dL0xgOYiW1K3q4zOOISJRyR-0YbKBjd8GHx8XsACx3JzRTqoQIFfBSxmuhA29P5uKutqxxINVgyiXnf66BKnG9pQ-qzJ_W-rFPYth9Q_Rsv0lXbIw60ZiUDNpOjdcuNmB3i6vkpH763fOGyZJHWmyFT-6F_0tOtkeOfyQdcNnu11jH_Ni_vNsbit8z6IPL75wj8u0LkG1tTZ9MfJqrVb65eYSmvIPQP88kodljMYrbvteZ89qT69Wj4l-8y4NWudNhqHKHQ7i");'></div>
+</div>
+<!-- AI Message -->
+<div class="flex items-end gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0 border-2 border-primary" data-alt="AI assistant circular avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgybULDBU2e1BPTpIf4HkwhELUA-UgOTWctM6_EznQ74KsylQLmovTjT1PY5RshZ1jOqHGNHZJ5NfiU9C8adHWii4y_xJs4Q0Cnw23YTmsXeBSataXs1Xsqx8lngJNs4e4GkkNuHBVv3EHfCrxxYbldo4x-mz1iiiV-Ugo_m8cUluPOZ0AGaeqIOKCdxDAnCNWpRZRXb7KWsZRrAMlrpSDOwDg5RSTEO7M-TDxpw47WxVfuZ2q65bk_vPNpjAS4PvswJLZUbs1b9mV");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-white/60 text-[13px] font-normal leading-normal max-w-[360px]">AI Assistant</p>
+<p class="text-base font-normal leading-normal flex max-w-[360px] rounded-lg px-4 py-3 bg-[#28392e] text-white">
+                        Thanks! Now, what is your current monthly income?
+                    </p>
+</div>
+</div>
+</div>
+<!-- Composer / Message Input Bar -->
+<div class="bg-background-light dark:bg-background-dark p-4 border-t border-white/10 shrink-0">
+<div class="flex items-center gap-3">
+<label class="flex flex-col min-w-40 h-12 flex-1">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-[#28392e]">
+<a href="UPLOAD.html" class="flex items-center justify-center p-3 text-white/60 hover:text-white">
+<span class="material-symbols-outlined">attach_file</span>
+</a>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-white focus:outline-0 focus:ring-0 border-none bg-transparent h-full placeholder:text-white/40 text-base font-normal leading-normal" placeholder="Type your message..." value=""/>
+</div>
+</label>
+<a href="UPLOAD.html" class="flex items-center justify-center rounded-lg bg-primary px-3 py-2 text-background-dark font-medium">Upload</a>
+<button class="flex items-center justify-center size-12 shrink-0 rounded-lg bg-primary text-background-dark">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
